@@ -1,0 +1,11 @@
+groups:
+  - name: test-alerts
+    rules:
+      - alert: TargetUp
+        expr: up == 1
+        for: 10s
+        labels:
+          severity: info
+        annotations:
+          summary: "Target is UP"
+          description: "A monitored target is up and running."
